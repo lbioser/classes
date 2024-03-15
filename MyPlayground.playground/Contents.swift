@@ -1,10 +1,24 @@
 import UIKit
-
-var greeting = "Hello, playground"
-
-struct MyStruct<T> {
-    private var arrayRep = [T]()
+import SwiftUI
+protocol Runnable {
+   
+    var speed: Double { get }
 }
-
-let s = MyStruct<String>()
-
+class Dog: Runnable {
+    var speed: Double {
+        0
+    }
+    
+    //typealias Speed = Double
+    
+}
+class Person {
+    var pet:  Runnable {
+        return Dog()
+    }
+}
+struct MYs: View {
+    var body: some View{
+        Text("fff")
+    }
+}
